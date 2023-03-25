@@ -34,6 +34,8 @@ const ultimateFate = () => {
 
 fateBtn.addEventListener('click', ultimateFate);
 
+const deleteBtn = document.getElementById("fateDelete")
+
 const fateDelete = () => {
     axios.delete("http://localhost:4000/api/ultimateFate/")
         .then(res => {
@@ -42,6 +44,17 @@ const fateDelete = () => {
     });
 }
 
-fateBtn.addEventListener('click', fateDelete);
+deleteBtn.addEventListener('click', fateDelete);
 
+const restoreBtn = document.getElementById("fateRestore");
+
+const fateRestore = () => {
+    axios.get("https://localhost:4000/api/ultimateFate/")
+        .then(res => {
+            const data = res.data;
+            alert(data.ultimateFate);
+        });
+}
+
+restoreBtn.addEventListener("click", fateRestore);
 
