@@ -38,6 +38,6 @@ let ultimateFate = ["You will have a bad life!"];
 
 app.get("/api/ultimateFate", (req, res) => res.status(200).send({ ultimateFate }));
 app.delete("/api/ultimateFate", (req, res) => {ultimateFate = []; res.sendStatus(204);});
-app.post("/api/ultimateFate", (req, res) => {ultimateFate.push("You will be successful!"); res.sendStatus(200);});
+app.post("/api/ultimateFate", (req, res) => {ultimateFate.push[("You will be successful!")]; res.sendStatus(200);});
 
 console.log(ultimateFate);

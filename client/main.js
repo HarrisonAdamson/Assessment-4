@@ -49,7 +49,7 @@ deleteBtn.addEventListener('click', fateDelete);
 const restoreBtn = document.getElementById("fateRestore");
 
 const fateRestore = () => {
-    axios.get("https://localhost:4000/api/ultimateFate/")
+    axios.post("https://localhost:4000/api/ultimateFate/")
         .then(res => {
             const data = res.data;
             alert(data.ultimateFate);
