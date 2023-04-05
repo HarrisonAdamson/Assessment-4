@@ -39,7 +39,6 @@ const deleteBtn = document.getElementById("fateDelete")
 const fateDelete = () => {
     axios.delete("http://localhost:4000/api/ultimateFate/")
         .then(res => {
-            const data = res.data;
             alert("Fate deleted!");
     });
 }
@@ -48,13 +47,18 @@ deleteBtn.addEventListener('click', fateDelete);
 
 const restoreBtn = document.getElementById("fateRestore");
 
+const goodFate = {
+    fate: "You will have a great life!"
+};
+
 const fateRestore = () => {
-    axios.post("https://localhost:4000/api/ultimateFate/")
+    axios.post("https://localhost:4000/api/ultimateFate/", goodFate)
         .then(res => {
-            const data = res.data;
-            alert(data.ultimateFate);
+            alert("New fate added!");
         });
 }
 
 restoreBtn.addEventListener("click", fateRestore);
+
+
 
