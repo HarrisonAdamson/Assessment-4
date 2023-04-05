@@ -52,7 +52,7 @@ const goodFate = {
 };
 
 const fateRestore = () => {
-    axios.post("https://localhost:4000/api/ultimateFate/", goodFate)
+    axios.post("http://localhost:4000/api/ultimateFate/", goodFate)
         .then(res => {
             alert("New fate added!");
         });

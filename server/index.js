@@ -44,5 +44,5 @@ app.delete("/api/ultimateFate", (req, res) => {
 app.post("/api/ultimateFate", (req, res) => {
     const goodFate = req.body.fate;
     ultimateFate.push(goodFate);
-    res.sendStatus(200);
+    res.send("New fate added!");
 });
